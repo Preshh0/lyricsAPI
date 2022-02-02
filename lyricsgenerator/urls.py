@@ -1,8 +1,8 @@
 from django.urls import path
 
-from lyricsgenerator import views
+from .views import GenerateLyrics
 
 
 urlpatterns = [
-    path(' ', views.home, name="home" )
+    path('home/', GenerateLyrics.as_view(), name="home" )
 ]
